@@ -10,12 +10,12 @@ const app = express();
 const  PORT = 8001;
 
 //DB connection
+const uri = 'mongodb+srv://GVMASAUN:Gvm%405aunMongodb@cluster0.ewopt.mongodb.net/mydatabase?retryWrites=true&w=majority';
 
 // makeDBConnection("mongodb://0.0.0.0:27017/EJSshorturl")
-makeDBConnection("mongodb+srv://GVMASAUN:Gvm@5aunMongodb@cluster0.ewopt.mongodb.net/uslShortner")
+makeDBConnection(uri)
 .then(console.log("DB connected"))
 .catch((err)=>console.log("Error occurred: "+err));
-
 
 //middlewares section
 app.use(express.json());
