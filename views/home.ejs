@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        Hello from EJS file and thankyou
+    </h1>
+
+    <% if (locals.bodies) { %>
+        <h3>the shorted url for <%= bodies %> is : localhost://8001/url/<%= shortid %></h3>
+    <% } %>
+     
+    <form method="post" action="/url">
+        <label>Enter the URL</label>
+        <input type="text" name="originalUrl" placeholder="http://urlshortner.com">
+        <input type="submit" value="Reduce">
+    </form>
+</body>
+</html>
