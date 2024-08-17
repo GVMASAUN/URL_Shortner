@@ -10,7 +10,9 @@ const app = express();
 const  PORT = 8001;
 
 //DB connection
-makeDBConnection("mongodb://0.0.0.0:27017/EJSshorturl")
+
+// makeDBConnection("mongodb://0.0.0.0:27017/EJSshorturl")
+makeDBConnection("mongodb+srv://GVMASAUN:Gvm@5aunMongodb@cluster0.ewopt.mongodb.net/uslShortner")
 .then(console.log("DB connected"))
 .catch((err)=>console.log("Error occurred: "+err));
 
